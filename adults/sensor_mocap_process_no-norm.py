@@ -340,12 +340,12 @@ def convert_mocap_to_qpos(input_csv, output_csv, plot_dir, pic_name):
 
 if __name__ == "__main__": 
     p = argparse.ArgumentParser(description="Fix sensor Time_ms wraparound and drop first row")
-    p.add_argument("--sensor_dir", required=True, help="Path to input sensor CSV file")
-    p.add_argument("--mocap_dir", required=True, help="Path to write cleaned CSV file")
+    p.add_argument("--sensor_dir", required=True, help="Path to input sensor CSV folder")
+    p.add_argument("--mocap_dir", required=True, help="Path to write cleaned CSV folder")
     p.add_argument("--sensor_plots", required=True, help="Path to write sensor plots")
-    p.add_argument("--sensor_output", required=True, help="Path to write cleaned CSV file")
-    p.add_argument("--mocap_output", required=True, help="Path to write cleaned CSV file")
-    p.add_argument("--angle_arrays", required=True, help="Path to write cleaned CSV file")
+    p.add_argument("--sensor_output", required=True, help="Path to write cleaned sensor CSV file")
+    p.add_argument("--mocap_output", required=True, help="Path to write cleaned mocap CSV file")
+    p.add_argument("--angle_arrays", required=True, help="Path to write cleaned angle array CSV file")
     p.add_argument("--mocap_plots", required=True, help="Path to write mocap plots")
 
     args = p.parse_args()
